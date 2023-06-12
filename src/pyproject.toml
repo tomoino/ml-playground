@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "ml-playground"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.core.dependencies]
+omegaconf = "^2.3.0"
+numpy = "1.23.0"
+pillow = "^9.5.0"
+torch = {url = "https://download.pytorch.org/whl/cu117/torch-2.0.0%2Bcu117-cp38-cp38-linux_x86_64.whl"}
+torchvision = {url = "https://download.pytorch.org/whl/cu117/torchvision-0.15.1%2Bcu117-cp38-cp38-linux_x86_64.whl"}
+torchmetrics = "0.10.3"
+timm = "^0.9.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pysen = {version = "^0.10.4", extras = ["lint"]}
+wandb = "^0.15.3"
+
+[tool.poetry.group.jupyter.dependencies]
+jupyterlab = "^4.0.2"
+
+[tool.poetry.group.dinov2.dependencies]
+fvcore = "^0.1.5.post20221221"
+iopath = "^0.1.10"
+xformers = "0.0.18"
+submitit = "^1.4.5"
+cuml-cu11 = {url = "https://pypi.nvidia.com/cuml-cu11/cuml_cu11-23.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+raft-dask-cu11 = {url = "https://pypi.nvidia.com/raft-dask-cu11/raft_dask_cu11-23.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+ucx-py-cu11 = { url = "https://pypi.nvidia.com/ucx-py-cu11/ucx_py_cu11-0.31.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+pylibraft-cu11 = { url = "https://pypi.nvidia.com/pylibraft-cu11/pylibraft_cu11-23.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+rmm-cu11 = { url = "https://pypi.nvidia.com/rmm-cu11/rmm_cu11-23.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl" }
+cudf-cu11 = { url = "https://pypi.nvidia.com/cudf-cu11/cudf_cu11-23.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+ptxcompiler-cu11 = { url = "https://pypi.nvidia.com/ptxcompiler-cu11/ptxcompiler_cu11-0.7.0.post1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+cubinlinker-cu11 = { url = "https://pypi.nvidia.com/cubinlinker-cu11/cubinlinker_cu11-0.3.0.post1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
+dask-cudf-cu11 = { url = "https://pypi.nvidia.com/dask-cudf-cu11/dask_cudf_cu11-23.4.1-py3-none-any.whl"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pysen]
+version = "0.10"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+mypy_preset = "strict"
+line_length = 88
+py_version = "py39"
+
+[[tool.pysen.lint.mypy_targets]]
+  paths = ["."]
