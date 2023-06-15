@@ -41,6 +41,10 @@ ptxcompiler-cu11 = { url = "https://pypi.nvidia.com/ptxcompiler-cu11/ptxcompiler
 cubinlinker-cu11 = { url = "https://pypi.nvidia.com/cubinlinker-cu11/cubinlinker_cu11-0.3.0.post1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"}
 dask-cudf-cu11 = { url = "https://pypi.nvidia.com/dask-cudf-cu11/dask_cudf_cu11-23.4.1-py3-none-any.whl"}
 
+
+[tool.poetry.group.sam.dependencies]
+segment-anything = {git = "https://github.com/facebookresearch/segment-anything.git"}
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

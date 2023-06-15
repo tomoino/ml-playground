@@ -3665,6 +3665,25 @@ docs = ["ipykernel", "nbconvert", "numpydoc", "pydata_sphinx_theme (==0.10.0rc2)
 stats = ["scipy (>=1.3)", "statsmodels (>=0.10)"]
 
 [[package]]
+name = "segment_anything"
+version = "1.0"
+description = ""
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.extras]
+all = ["matplotlib", "onnx", "onnxruntime", "opencv-python", "pycocotools"]
+dev = ["black", "flake8", "isort", "mypy"]
+
+[package.source]
+type = "git"
+url = "https://github.com/facebookresearch/segment-anything.git"
+reference = "HEAD"
+resolved_reference = "6fdee8f2727f4506cfbbe553e23b895e27956588"
+
+[[package]]
 name = "send2trash"
 version = "1.8.2"
 description = "Send file to trash natively under Mac OS X, Windows and Linux"
@@ -3831,16 +3850,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 files = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
-]
-
-[[package]]
-name = "sklearn"
-version = "0.0.post5"
-description = "deprecated sklearn package, use scikit-learn instead"
-optional = false
-python-versions = "*"
-files = [
-    {file = "sklearn-0.0.post5.tar.gz", hash = "sha256:7377c714a03a79bbe9196f435db931fd2a6fa8c68514da7ed3a251fd08c52e2c"},
 ]
 
 [[package]]
@@ -4570,4 +4579,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "c28ded8740104da190f76410d851af4094b0a232e5b9068820cef017148a1a31"
+content-hash = "3627ef7c6a24e88932b873afd13cd88d40f71e8071e45d4bd086ae63d852487d"
